@@ -5,13 +5,17 @@ import Hello from './hello'
 import Header from './components/header'
 import Footer from './components/footer'
 import Card from './components/card'
-
+import getAllBlogs from '../lib/firebase'
 
 export default function Home() {
   let cards = []
-  for ( let i = 0;i<10 ; i++){
-    cards.push(<Card />)
+  for (let i = 0; i < 10; i++) {
+    cards.push(<Card key = {i}/>)
   }
+
+  // let blogs =  getAllBlogs()
+  
+  // for(let blog of blogs)console.log(blog);
 
 
   return (
