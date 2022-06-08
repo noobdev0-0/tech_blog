@@ -4,8 +4,16 @@ import styles from '../styles/Home.module.css'
 import Hello from './hello'
 import Header from './components/header'
 import Footer from './components/footer'
+import Card from './components/card'
+
 
 export default function Home() {
+  let cards = []
+  for ( let i = 0;i<10 ; i++){
+    cards.push(<Card />)
+  }
+
+
   return (
     <>
       <Head>
@@ -14,8 +22,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      {cards}
       <Footer />
-      
+
     </>
   )
 }
